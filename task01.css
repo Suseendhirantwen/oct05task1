@@ -1,0 +1,129 @@
+:root {
+  --darkGray: #333333;
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #c5c1c1;
+  letter-spacing: 6px;
+  max-width: 1440px;
+  margin: auto;
+}
+#header {
+  background-color: #2d3e46;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  padding: 0 30px 0 30px;
+}
+#title {
+  color: white;
+  letter-spacing: 6px;
+  flex-grow: 1;
+  text-align: center;
+}
+#content {
+  padding: 100px 25px;
+  display: flex;
+}
+
+#leftSection {
+  height: 500px;
+  width: 300px;
+  min-width: 200px;
+  background-color: var(--darkGray);
+  border-radius: 20px;
+}
+#rightSection {
+  flex-grow: 1;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.searchInput {
+  height: 50px;
+  background-color: var(--darkGray);
+  width: 65%;
+  border-radius: 10px;
+  border-width: 0;
+  font-size: 18px;
+  padding-left: 15px;
+  margin-top: 20px;
+  color: white;
+}
+::placeholder {
+  color: gray;
+  border: none;
+  letter-spacing: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+  margin-top: 20px;
+}
+.smallBox {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+}
+.smallBox > div {
+  width: 200px;
+  height: 140px;
+  background-color: var(--darkGray);
+  border-radius: 10px;
+  margin: 0 20px;
+}
+.largeBox {
+  width: 80%;
+  background-color: var(--darkGray);
+  height: 140px;
+  border-radius: 10px;
+}
+
+@media (min-width: 360px) and (max-width: 600px) {
+  #content {
+    flex-direction: column;
+  }
+  #leftSection {
+    height: 400px;
+    width: 100%;
+  }
+  .searchInput {
+    width: 95%;
+  }
+  .smallBox > div {
+    margin: 20px 5px;
+  }
+  .smallBox {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .largeBox {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) and (max-width: 900px) {
+  #leftSection {
+    height: 400px;
+    width: 20%;
+  }
+  #rightSection {
+    width: 70%;
+    margin-left: 20px;
+  }
+
+  .searchInput {
+    width: 95%;
+  }
+  .smallBox > div {
+    margin: 20px 5px;
+  }
+  .smallBox {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .largeBox {
+    width: 100%;
+  }
+}
